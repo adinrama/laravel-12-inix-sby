@@ -8,11 +8,13 @@ Route::get('/me', function () {
 });
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/about', function () {
-    return view('about', ['name'=>'Adin Rama', 'address'=>'Tulungagung']);
+    return view('pages.about', ['name'=>'Adin Rama', 'address'=>'Tulungagung']);
 });
 
 Route::get('/contact', [ContactController::class, 'index']);
+
+Route::get('/product', [ProductController::class, 'index']);
